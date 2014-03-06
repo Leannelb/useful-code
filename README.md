@@ -14,7 +14,6 @@ class ProductDataFeed extends XmlDataList{
 		$this->file_path='products.xml';
                 $this->element_tag='product';
 	}
-
 }
 ```
 
@@ -40,7 +39,7 @@ Now as you can probably tell this is only for quite basic XML. An example for th
 	<product id="2">
 		<name>Second product</name>
 	</product>
-</product>
+</products>
 ```
 
 Anyway, i hope this explains it well enough, any questions just drop me a line at ryan.s.lund@gmail.com
