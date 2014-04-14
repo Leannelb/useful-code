@@ -47,7 +47,7 @@ Anyway, i hope this explains it well enough, any questions just drop me a line a
 -------------------------------------------------------------------------------------------------------
 
 ###Date.js
-========================
+
 
 I quickly put together this little addition to javascripts Date object because I missed PHP's date function (and DateTime::format()). To use simply include the file into your html and use like this:
 
