@@ -239,7 +239,7 @@ Date.prototype.format_values=function(){
 		'U':function(){
 			return date.getTime();
 		}
-	}
+	};
 	
 	return values;
 };
@@ -249,7 +249,7 @@ Date.prototype.format=function(format){
 	var format_placeholders_regex=/([dDjlNSwzWFmMntLYyaAgGhHisU]{1})/g;
 	var matches=format.match(format_placeholders_regex);
 	
-	if(matches!=false&&Array.isArray(matches)){
+	if(matches!==false&&Array.isArray(matches)){
 		for(var i=0; i<matches.length; i++){
 			var match=matches[i];
 			
