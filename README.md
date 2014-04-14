@@ -44,3 +44,18 @@ Now as you can probably tell this is only for quite basic XML. An example for th
 
 Anyway, i hope this explains it well enough, any questions just drop me a line at ryan.s.lund@gmail.com
 
+-------------------------------------------------------------------------------------------------------
+
+Date.js
+========================
+
+I quickly put together this little addition to javascripts Date object because I missed PHP's date function (and DateTime::format()). To use simply include the file into your html and use like this:
+
+```js
+var date=new Date();
+var date_string=date.format('d/m/Y H:i:s'); //where d/m/Y H:i:s is the format.
+```
+
+Now, I haven't implemented all of the placeholders that are provided in PHP. I will provide a list of unsupported placeholders in the near future and will likely get around to implementing them when I can. 
+
+Anyway, hope this helps someone out there. 
