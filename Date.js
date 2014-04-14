@@ -1,84 +1,5 @@
-Date.prototype.weekday_names=[
-	{
-		short: 'Sun',
-		long: 'Sunday'
-	},
-	{
-		short: 'Mon',
-		long: 'Monday'
-	},
-	{
-		short: 'Tue',
-		long: 'Tuesday'
-	},
-	{
-		short: 'Wed',
-		long: 'Wednesday'
-	},
-	{
-		short: 'Thu',
-		long: 'Thursday'
-	},
-	{
-		short: 'Fri',
-		long: 'Friday'
-	},
-	{
-		short: 'Sat',
-		long: 'Saturday'
-	}
-];
-
-Date.prototype.month_names=[
-	{
-		short: 'Jan',
-		long: 'January',
-	},
-	{
-		short: 'Feb',
-		long: 'February',
-	},
-	{
-		short: 'Mar',
-		long: 'March',
-	},
-	{
-		short: 'Apr',
-		long: 'April',
-	},
-	{
-		short: 'May',
-		long: 'May',
-	},
-	{
-		short: 'Jun',
-		long: 'June',
-	},
-	{
-		short: 'Jul',
-		long: 'July',
-	},
-	{
-		short: 'Aug',
-		long: 'August',
-	},
-	{
-		short: 'Sep',
-		long: 'September',
-	},
-	{
-		short: 'Oct',
-		long: 'October',
-	},
-	{
-		short: 'Nov',
-		long: 'November',
-	},
-	{
-		short: 'Dec',
-		long: 'December',
-	}
-];
+Date.prototype.weekday_names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+Date.prototype.month_names=['January','February','March','April','May','June','July','August','September','October','November','December'];
 
 Date.prototype.format_values=function(){
 	var date=this;
@@ -95,13 +16,14 @@ Date.prototype.format_values=function(){
 			}			
 		},
 		'D': function(){
-			return date.weekday_names[this.w()].short;
+			var name=date.weekday_names[this.w()];
+			return name.substring(0,3);
 		},
 		'j':function(){
 			return date.getDate();
 		},
 		'l':function(){
-			return date.weekday_names[this.w()].short;
+			return date.weekday_names[this.w()];
 		},
 		'N':function(){
 			return this.w()+1;
@@ -139,8 +61,7 @@ Date.prototype.format_values=function(){
 			return date.getDay();
 		},
 		'F':function(){
-			var month=this.n();
-			return date.month_names[month].long;
+			return date.month_names[this.n()];
 		},
 		'm':function(){
 			var month=this.n();
@@ -153,8 +74,8 @@ Date.prototype.format_values=function(){
 			}
 		},
 		'M':function(){
-			var month=this.n();
-			return date.month_names[month].short;
+			var name=date.month_names[this.n()];
+			return name.substring(0,3);
 		},
 		'n':function(){
 			return date.getMonth();
