@@ -12,7 +12,7 @@ Ok so I wrote this little class to help iterate through simple (but potentially 
 class ProductDataFeed extends XmlDataList{
 	public function __construct(){
 		$this->file_path='products.xml';
-                $this->element_tag='product';
+		$this->element_tag='product';
 	}
 }
 ```
